@@ -1,0 +1,66 @@
+Create a production-grade HashiCorp Boundary implementation with documentation that demonstrates enterprise deployment best practices.
+The implementation and documentation should include:
+
+1. ARCHITECTURE OVERVIEW
+- Generate detailed architectural diagrams using mermaid.js showing:
+  * Control plane components (KMS, Database, Controllers)
+  * Worker node placement across availability zones
+  * Network traffic flows and security boundaries
+  * Integration touchpoints with Vault, Consul, and cloud services
+- Provide network architecture diagrams illustrating:
+  * Port/protocol matrix for all components
+  * Security group rules and network ACLs
+  * Load balancer and high availability configuration
+  * Cross-region connectivity patterns
+
+2. INFRASTRUCTURE DEPLOYMENT
+- Deliver infrastructure-as-code using:
+  * Terraform modules for AWS/Azure/GCP deployment
+  * Kubernetes manifests for containerized components
+  * Ansible playbooks for configuration management
+- Include high-availability configurations for:
+  * PostgreSQL cluster setup with streaming replication
+  * Worker node auto-scaling groups
+  * Load balancer health checks and failover logic
+  * Backup and disaster recovery procedures
+
+3. SECURITY HARDENING
+- Document security implementation details:
+  * Step-by-step OIDC configuration for Azure AD/Okta
+  * Role-based access control policies with least privilege
+  * KMS key rotation and management procedures
+  * TLS certificate lifecycle management
+- Specify monitoring requirements:
+  * ELK/Splunk integration for audit logging
+  * Prometheus/Grafana dashboards
+  * PagerDuty/OpsGenie alert routing
+
+4. SYSTEM INTEGRATION
+- Provide working examples with full code samples for:
+  * Vault dynamic credential generation
+  * Consul service mesh integration
+  * Terraform automated provisioning
+  * Jenkins/GitLab CI pipeline configuration
+- Include integration test suites and validation procedures
+
+5. OPERATIONS GUIDE
+- Detail day-2 operations:
+  * Backup scheduling and verification
+  * Rolling upgrade procedures
+  * Performance tuning recommendations
+  * Common issues and resolution steps
+  * Capacity planning guidelines
+
+Deliverables:
+- Markdown documentation with proper formatting
+- Executable code samples in ```code blocks```
+- Mermaid.js diagrams for all architectural components
+- Comparison tables for configuration options
+- Warning callouts for security considerations
+- Performance impact notifications
+- Prerequisites and dependencies list
+- Troubleshooting decision trees
+
+Target Audience: Enterprise DevOps teams and security engineers familiar with HashiCorp tools
+
+Success Criteria: Complete, production-ready implementation with users guide enabling teams to deploy and maintain a secure, scalable Boundary infrastructure
